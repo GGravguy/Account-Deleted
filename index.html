@@ -87,7 +87,7 @@
     <h1>Account Deleted</h1>
     <p>
         Your account has been removed due to a violation of community rules and guidelines.
-        If you believe this is a mistake, contact support.
+        If you didn't do anything, this will be fixed.
     </p>
 
     <button onclick="closePage()">Close</button>
@@ -95,17 +95,7 @@
 
 <script>
 function closePage() {
-    // Try to close the tab (only works if opened by script)
-    window.close();
-
-    // If embedded in an iframe, notify parent
-    try {
-        if (window.parent && window.parent !== window) {
-            window.parent.postMessage("close_embed", "*");
-        }
-    } catch (e) {
-        console.log("Cannot communicate with parent.");
-    }
+    window.location.href = "about:blank";
 }
 </script>
 
