@@ -4,99 +4,88 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Account Deleted</title>
-
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
 
-    body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: radial-gradient(circle at top, #1a1a1a, #000);
-        color: white;
-    }
+  .container {
+    width: 600px;
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 14px;
+    line-height: 1.5;
+  }
 
-    .card {
-        width: 360px;
-        padding: 30px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.06);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-        text-align: center;
-        animation: popIn 0.5s ease-out;
-    }
+  h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #222;
+  }
 
-    @keyframes popIn {
-        from {
-            transform: scale(0.9);
-            opacity: 0;
-        }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
+  p {
+    margin-bottom: 15px;
+  }
 
-    .icon {
-        font-size: 50px;
-        margin-bottom: 10px;
-    }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
 
-    h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-        color: #ff4d4d;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    p {
-        font-size: 14px;
-        opacity: 0.8;
-        margin-bottom: 20px;
-        line-height: 1.4;
-    }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
 
-    button {
-        padding: 10px 18px;
-        border: none;
-        border-radius: 8px;
-        background: #ff4d4d;
-        color: white;
-        cursor: pointer;
-        font-size: 14px;
-        transition: 0.2s ease;
-    }
+  button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 
-    button:hover {
-        background: #ff1f1f;
-        transform: scale(1.05);
-    }
+  button:hover {
+    background-color: #005bb5;
+  }
 </style>
 </head>
-
 <body>
 
-<div class="card">
-    <div class="icon">⚠️</div>
-    <h1>Account Deleted</h1>
-    <p>
-        Your account has been removed due to a violation of community rules and guidelines.
-        If you didn't do anything, this will be fixed.
-    </p>
-
-    <button onclick="closePage()">Close</button>
+<div class="container">
+  <h1>Account Deleted</h1>
+  <p>
+    Our content monitors have determined that your Use of Search Hub has been in violation of our Terms of Use.
+    <br><br>
+    Recent Violation: Behavior that violates Search Hub Terms of Use.
+  </p>
+  <p>
+    Your account has been terminated. If you didn't do anything wrong or believe this is a mistake, you can appeal.
+  </p>
+  <div class="buttons">
+    <button onclick="closePage()">Logout</button>
+  </div>
 </div>
 
 <script>
-function closePage() {
+  function closePage() {
     window.location.href = "about:blank";
-}
+  }
 </script>
 
 </body>
